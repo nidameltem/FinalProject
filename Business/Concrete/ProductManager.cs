@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
@@ -36,7 +37,7 @@ namespace Business.Concrete
 
         //işlemlerle ilgili bilgilendirme yapmak istersek 
 
-
+        [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
 
         public IResult Add(Product product) //buradada void yerine IResult yazdık 
