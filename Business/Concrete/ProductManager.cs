@@ -38,7 +38,7 @@ namespace Business.Concrete
         //işlemlerle ilgili bilgilendirme yapmak istersek 
 
         [SecuredOperation("product.add,admin")]
-        [ValidationAspect(typeof(ProductValidator))]
+        //[ValidationAspect(typeof(ProductValidator))]
 
         public IResult Add(Product product) //buradada void yerine IResult yazdık 
         {
